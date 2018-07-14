@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Note: event the enum classs still unable to  avoid the risk that causing trouble by using Reflection
+ * Note: event the enum class still unable to  avoid the risk that causing trouble by using Reflection
  *
  * @author getthrough
  * @date 2018/7/13
@@ -21,8 +21,8 @@ public enum Singleton5 {
         this.name = name;
         this.address = address;
 
-//        // test construction execute
-//        System.out.println("surely executed!");
+        // test construction execute
+        System.out.println("surely executed!");
     }
 
     public static List<String> getProps() {

@@ -1,5 +1,7 @@
 package singleton;
 
+import sun.misc.Unsafe;
+
 import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -17,8 +19,8 @@ public class SingletonTest {
 //        testSinglton2();
 //        testSinglton4();
 //        testSinglton5();
-//        testSinglton5_2();// can't work due to NoSuchMethodException
-        testSinglton6();
+        testSinglton5_2();// Cannot reflectively create enum objects
+//        testSinglton6();
 
     }
 
@@ -34,12 +36,12 @@ public class SingletonTest {
     private static void testSinglton5_2() throws IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
 
         Singleton5 obj1 = Singleton5.INSTANCE;
-        Constructor declaredConstructor = obj1.getClass().getDeclaredConstructor(new Class[0]);
+        Class<Singleton5> singleton5Class = Singleton5.class;
+        Constructor<?> declaredConstructor = singleton5Class.getDeclaredConstructors()[0];
         declaredConstructor.setAccessible(true);
         Singleton5 obj2 = (Singleton5) declaredConstructor.newInstance();
 
-//        Class<? extends Singleton5> aClass = obj1.getDeclaringClass();
-//        Singleton5 obj2 = aClass.newInstance();
+//        Singleton5 obj2 = (Singleton5) Unsafe.getUnsafe().allocateInstance(Singleton5.class);
 
 
         System.out.printf("Singleton5 test with reflection: obj1 == obj2 ? -> %s\n", obj1 == obj2);
