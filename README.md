@@ -1,9 +1,7 @@
 # DesignPatterns
 A repository about my exploration of design patterns
 
-### Introduction
-
-##### Singleton Design Pattern
+### Singleton Design Pattern
 
 **NOTE**: all of these singleton types make no sense when using Reflection except **enum type**!
 
@@ -64,7 +62,7 @@ public class Singleton1 {
          * implement this "readResolve" method to ensure the object returned by 
          * deserialized is the same as the object before serialized
          
-         * 详见：https://docs.oracle.com/javase/7/docs/platform/serialization/spec/input.html#5903
+         * see：https://docs.oracle.com/javase/7/docs/platform/serialization/spec/input.html#5903
          *
          * @return
          * @throws ObjectStreamException
