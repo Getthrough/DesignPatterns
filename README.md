@@ -5,7 +5,7 @@ A repository about my exploration of design patterns
 
 **NOTE**: all of these singleton types make no sense when using Reflection except **enum type**!
 
-* Hungry Type
+* Hungry Type I
 ```$xslt
 public class Singleton1 {
     private static Singleton1 obj = new Singleton1();
@@ -17,7 +17,23 @@ public class Singleton1 {
         return obj;
     }
 }
+```
+* Hungry Type II
+```$xslt
+public class Singleton1 {
+    private static Singleton1 obj = null;
 
+    private Singleton1() {
+    }
+    
+    static {
+        obj = new Singleton1();
+    }
+
+    public static Singleton1 getInstance() {
+        return obj;
+    }
+}
 ```
 * Lazy Type
 
