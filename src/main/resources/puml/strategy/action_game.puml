@@ -1,0 +1,51 @@
+@startuml
+
+abstract class Character{
+WeaponBehavior weapon;
+fight();
+setWeapon();
+}
+
+class Queuen{
+
+}
+Character <|- Queuen
+
+class King{
+
+}
+Character <|- King
+
+class Knight{
+
+}
+Character <|- Knight
+
+class Troll{
+
+}
+Character <|- Troll
+
+interface WeaponBehavior{
+useWeapon();
+}
+
+class KnifeBehavior{
+}
+WeaponBehavior <|.. KnifeBehavior
+
+class BowAndArrowBehavior{
+}
+WeaponBehavior <|.. BowAndArrowBehavior
+
+class AxeBehavior{
+}
+WeaponBehavior <|.. AxeBehavior
+
+class SwordBehavior{
+}
+WeaponBehavior <|.. SwordBehavior
+
+Character --> WeaponBehavior
+
+@enduml

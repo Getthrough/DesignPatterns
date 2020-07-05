@@ -149,3 +149,12 @@ public class Singleton6 {
     }
 }
 ```
+
+### Strategy Design Pattern
+> 策略模式(https://en.wikipedia.org/wiki/Strategy_pattern)是一种"行为"类型的软件设计模式，它允许程序在运行时动态选择算法，而非在代码中直接实现一种单一算法。将决定使用哪种算法的决定推迟到运行时，才能使调用代码更加灵活和可重用。
+示例在`duck_example`目录下，参考《Head First Design Patterns》实现。
+
+### Observer Design Pattern
+
+
+
