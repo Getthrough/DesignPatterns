@@ -155,6 +155,11 @@ public class Singleton6 {
 示例在`duck_example`目录下，参考《Head First Design Patterns》实现。
 
 ### Observer Design Pattern
+> 观察者模式: 定义了对象之间的一对多依赖，当一个对象的状态改变时，它的所有依赖者都能够收到通知并更新。
+
+### Decorator Design Pattern
+> 装饰着模式: 动态地将责任附加到对象上。相比较继承，装饰者模式更易于扩展。
+
 
 
 
