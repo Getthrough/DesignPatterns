@@ -14,6 +14,7 @@ public class StarbuzzCoffeeTest {
 
         // 通过传入原始的咖啡应用，一层一层地添加调料，达到装饰增强的目的
         Beverage houseBlend = new HouseBlend();
+        houseBlend = new SmallSize(houseBlend);
         houseBlend = new Soy(houseBlend);
         houseBlend = new Mocha(houseBlend);
         houseBlend = new Whip(houseBlend);

@@ -20,4 +20,5 @@ public abstract class Beverage {
      * @return 价格
      */
     public abstract double cost();
+
 }
