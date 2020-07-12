@@ -2,6 +2,11 @@ package factory_method;
 
 /**
  * 披萨店
+ * <p>
+ *     披萨店作为一个高层组件，现在依赖的是底层组件的抽象，而不是底层组件具体类；
+ *     同样地，底层组件的实例化也依赖了高层组件的抽象（不同的披萨店）。工厂方法
+ *     中体现了依赖倒置原则（Dependency Inversion Principle）。
+ * </p>
  *
  * @author getthrough
  * @date 2020/7/10
